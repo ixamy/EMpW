@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link id="favicon" rel="shortcut icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/javascript.js" charset="utf-8"></script>
+    <title>EMpW</title>
+  </head>
+  <body>
+    <div class="main">
+      <form action="https://api.whatsapp.com/send?" target="_blank">
+        <div class="datos">
+          <input type="tel" id="phone" name="phone" maxlength="9" pattern=".{9,}" autocomplete="off" required placeholder="Celular">
+      		<input type="button" value="AR" onclick=argentina()>
+      		<input type="text" id="nombre" autocomplete="off" placeholder="Nombre">
+      		<input type="text" id="precio" autocomplete="off" placeholder="Presupuesto" onfocus=estadoPresupuesto()>
+        </div>
+        <textarea id="textarea" rows="6" cols="35" name="text"></textarea>
+
+        <div class="plantillas">
+          <input type="radio" name="plantilla" id="radio_listo" value="Listo" onclick=equipoListo()>
+          <label for="radio_listo">Listo</label><br>
+
+          <input type="radio" name="plantilla" id="radio_sinSolucion" value="Sin solución" onclick=sinSolucion()>
+          <label for="radio_sinSolucion">Sin solución</label><br>
+
+          <input type="radio" name="plantilla" id="radio_llegoRepuesto" value="Llegó repuesto" onclick=llegoRepuesto()>
+          <label for="radio_llegoRepuesto">Llegó repuesto</label><br>
+
+          <input type="radio" name="plantilla" id="radio_desbloqueo" value="Código" onclick=desbloqueo()>
+          <label for="radio_desbloqueo">Código</label><br>
+
+          <input type="radio" name="plantilla" id="radio_presupuesto" value="Presupuesto" onclick=presupuesto()>
+          <label for="radio_presupuesto">Presupuesto</label>
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="Abrir Whatsapp" onclick=areaCode()>
+      		<input type="reset" value="Limpiar">
+        </div>
+  	</form>
+    </div>
+
+  </body>
+</html>

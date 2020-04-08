@@ -1,0 +1,34 @@
+body{
+  background-color: #4a4a4a;
+  background-image: url(https://web.whatsapp.com/img/bg-chat-tile_9e8a2898faedb7db9bf5638405cf81ae.png);
+  font-family: "Segoe UI";
+}
+
+.main {
+  position: relative;
+  border-radius: 10px;
+  margin: 150px auto;
+  width:320px;
+  text-align:center;
+  padding:10px;
+  background-color:#dcf8c6;
+  opacity: 80%;
+}
+
+.plantillas{
+  text-align: left;
+  column-count: 2;
+}
+
+.submit{}
+
+.datos{}
+
+#textarea{
+  resize: none;
+  margin-top: 5px
+}
+
+input{
+  margin-top: 5px
+}
