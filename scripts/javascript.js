@@ -1,7 +1,8 @@
-var fecha = new Date();
+
 var arg = true;
 
 function devuelveHora(){
+	var fecha = new Date();
   if(fecha.getHours() <= 12){
     return "Buen día";
   } else if(fecha.getHours() > 12){
@@ -18,6 +19,7 @@ function areaCode(){
     number = "598" + number;
   }
   document.getElementById("phone").value = number;
+  //alert("ANOTAR EN EL SISTEMA QUE SE AVISO");
 }
 
 function nombre(){
@@ -32,10 +34,10 @@ function equipoListo(){
   document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que su equipo esta listo. ¿Cuando podria pasar?"
 }
 function sinSolucion(){
-  document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que lamentablemente su equipo no tuvo reparación, recuerde que conservamos equipos en este estado por un maximo de 60 días, luego de ese tiempo se descartan. Le esperamos de Lunes a Sábados de 09:00 a 19:00."
+  document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que lamentablemente su equipo no tuvo reparación, recuerde que conservamos equipos en este estado por un maximo de 60 días, luego de ese tiempo se descartan. Le esperamos de Lunes a Sábados de 09:00 a 20:00."
 }
 function llegoRepuesto(){
-  document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que ya nos llego el repuesto para su equipo, le esperamos de Lunes a Sábados de 09:00 a 19:00."
+  document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que ya nos llego el repuesto para su equipo, le esperamos de Lunes a Sábados de 09:00 a 20:00."
 }
 function desbloqueo(){
   document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que su equipo tiene código de desbloqueo y el técnico lo precisa para continuar con la reparación, nos lo puede proporcionar por esta misma vía."
@@ -68,4 +70,13 @@ function presupuesto(){
 function estadoPresupuesto(){
   document.getElementById("precio").placeholder = "Presupuesto";
   document.getElementById("precio").style.backgroundColor = "white";
+}
+
+function formato(){
+  document.getElementById("nombre").value = document.getElementById("nombre").value.replace(/\s/g, '')
+  document.getElementById("nombre").value = document.getElementById("nombre").value[0].toUpperCase() + document.getElementById("nombre").value.slice(1).toLowerCase();
+}
+
+function armado(){
+  document.getElementById("textarea").value = devuelveHora() + nombre() + ", le escribo desde Avlis para avisarle que su equipo esta armado para ser retirado."
 }
