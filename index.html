@@ -11,15 +11,18 @@
     <div class="main">
       <form action="https://api.whatsapp.com/send?" target="_blank">
         <div class="datos">
-          <input type="tel" id="phone" name="phone" maxlength="9" pattern=".{9,}" autocomplete="off" required placeholder="Celular">
-      		<input type="button" value="AR" onclick=argentina()>
-      		<input type="text" id="nombre" autocomplete="off" placeholder="Nombre">
-      		<input type="text" id="precio" autocomplete="off" placeholder="Presupuesto" onfocus=estadoPresupuesto()>
+          <input type="tel" id="phone" name="phone" maxlength="9" pattern=".{9,}" autocomplete="off" required placeholder="Celular" tabindex=1>
+      		<!--input type="button" value="AR" onclick=argentina()-->
+			
+      		<input type="text" id="nombre" autocomplete="off" placeholder="Nombre" onblur=formato() tabindex=2>
+			<!--input type="button" value="PF" onclick=formato()-->
+			
+      		<input type="text" id="precio" autocomplete="off" placeholder="Presupuesto" onfocus=estadoPresupuesto() tabindex=3>
         </div>
-        <textarea id="textarea" rows="6" cols="35" name="text"></textarea>
+        <textarea id="textarea" rows="6" cols="35" name="text" tabindex=4></textarea >
 
         <div class="plantillas">
-          <input type="radio" name="plantilla" id="radio_listo" value="Listo" onclick=equipoListo()>
+          <input type="radio" name="plantilla" id="radio_listo" value="Listo" onclick=equipoListo() tabindex=5>
           <label for="radio_listo">Listo</label><br>
 
           <input type="radio" name="plantilla" id="radio_sinSolucion" value="Sin solución" onclick=sinSolucion()>
@@ -32,7 +35,10 @@
           <label for="radio_desbloqueo">Código</label><br>
 
           <input type="radio" name="plantilla" id="radio_presupuesto" value="Presupuesto" onclick=presupuesto()>
-          <label for="radio_presupuesto">Presupuesto</label>
+          <label for="radio_presupuesto">Presupuesto</label><br>
+
+          <input type="radio" name="plantilla" id="radio_armado" value="Armado" onclick=armado()>
+          <label for="radio_armado">Armado</label>
         </div>
 
         <div class="submit">
