@@ -12,10 +12,10 @@
       <form action="https://api.whatsapp.com/send?" target="_blank">
         <div class="datos">
           <input type="tel" id="phone" name="phone" maxlength="9" pattern=".{9,}" autocomplete="off" required placeholder="Celular" tabindex=1>
-      		<!--input type="button" value="AR" onclick=argentina()-->
+      		<input type="checkbox" id="flag" onclick=argentina()>
+			<label for="flag">AR</label>
 			
       		<input type="text" id="nombre" autocomplete="off" placeholder="Nombre" onblur=formato() tabindex=2>
-			<!--input type="button" value="PF" onclick=formato()-->
 			
       		<input type="text" id="precio" autocomplete="off" placeholder="Presupuesto" onfocus=estadoPresupuesto() tabindex=3>
         </div>
