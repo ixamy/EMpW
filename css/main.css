@@ -10,18 +10,17 @@ body{
   width:320px;
   text-align:center;
   padding:10px;
-  background-color:#dcf8c6;
-  opacity: 80%;
+  background-color:#bfd5ad;
+}
+
+.datos{
+	
 }
 
 .plantillas{
   text-align: left;
   column-count: 2;
 }
-
-.submit{}
-
-.datos{}
 
 #textarea{
   resize: none;
