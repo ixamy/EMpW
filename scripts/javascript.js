@@ -45,14 +45,18 @@ function nombre(){
 }
 
 function formato(){
-  nombreArray = document.getElementById("nombre").value.split(" ");
-  if(nombreArray.length<2){
-	  document.getElementById("nombre").value = nombreArray[0][0].toUpperCase() + nombreArray[0].slice(1).toLowerCase();
-  } else {
-	  for(var i=0;i<nombreArray.length;i++){
-		  nombreArray[i] = nombreArray[i][0].toUpperCase() + nombreArray[i].slice(1).toLowerCase();
-	  } document.getElementById("nombre").value = nombreArray.join(" ");
-  }
+	var tmp="";
+	var nombreArray = document.getElementById("nombre").value.split(" ");
+	if(document.getElementById("nombre").value[document.getElementById("nombre").value.length-1] == " "){
+		nombreArray.pop();
+	}
+	if(nombreArray.length<2){
+		document.getElementById("nombre").value = nombreArray[0][0].toUpperCase() + nombreArray[0].slice(1).toLowerCase();
+	} else {
+		for(var i=0;i<nombreArray.length;i++){
+			nombreArray[i] = nombreArray[i][0].toUpperCase() + nombreArray[i].slice(1).toLowerCase();
+		} document.getElementById("nombre").value = nombreArray.join(" ");
+	}
 }
 
 function equipoListo(){
