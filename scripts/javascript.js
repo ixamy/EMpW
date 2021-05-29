@@ -45,7 +45,6 @@ function nombre(){
 }
 
 function formato(){
-	var tmp="";
 	var nombreArray = document.getElementById("nombre").value.split(" ");
 	if(document.getElementById("nombre").value[document.getElementById("nombre").value.length-1] == " "){
 		nombreArray.pop();
